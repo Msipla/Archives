@@ -8,7 +8,7 @@ https://msipla.github.io/Archives/
 ## 更新《艾瑟兰德》
 1. 真实生成并提交 `aetherland/canonical-save.md` 的新权威版本；保留旧版本的 Git 历史。
 2. 每个周期的原始存档单独新增在 `aetherland/history/cycles/`，按 `06_742-MM-DD.md` 等命名。
-3. 网站通过 GitHub 公共仓库 Tree API **在访客打开页面时尝试发现新增 Markdown 文件**，并把它们加入资料目录。若 GitHub API 暂时不可访问，页面仍可用内置目录，点击“刷新档案目录”可重试。
+3. 网站通过 GitHub 公共仓库 Tree API **在访客打开页面时尝试发现新增 Markdown 文件**，并把它们加入资料目录。若 GitHub API 暂时不可访问，页面仍可用内置目录（已覆盖当前第六、七周期、交接与成长规则等资料），点击“刷新档案目录”可重试。
 4. 更新既有文件会在 Pages 重新部署后生效。若浏览器缓存旧页面，请刷新。
 5. 本站没有自动替GM生成存档、自动把聊天内容提交 GitHub 的能力；每次提交必须真实执行并核验。
 
@@ -23,3 +23,5 @@ https://msipla.github.io/Archives/
 
 ## 技术说明
 本站是无构建步骤的静态 HTML/CSS/JS。Markdown 阅读使用 CDN 加载的 Marked 与 DOMPurify，加载失败时退回纯文本显示。外部 GitHub API 不可用时使用页面内置目录。仓库文件为唯一事实来源，网站不应修改权威存档。
+
+维护时同步补齐内置目录，否则API失败时新资料将缺入口。阅读器内同世界Markdown链接继续在阅读器打开并保留剧透提示；目录链接及根目录/其他世界文档转至GitHub源入口，避免Pages目录404。切换世界会取消旧文档的显示请求，防止迟到响应混入另一世界。
